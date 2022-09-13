@@ -1,1 +1,18 @@
-.box {background-color: blue;; width: 100px; height: 100px; margin-bottom: 2px; display: inline-block;}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  /* Main Axis */
+  justify-content: space-around;
+  /* Cross Axis */
+  align-items: stretch;
+  background-color: burlywood;
+  height: 80vh;
+}
+
+.box {
+  background-color: blue;
+  /* width: 150px; */
+  height: 150px;
+  color: white;
+}
+
