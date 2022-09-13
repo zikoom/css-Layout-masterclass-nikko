@@ -1,12 +1,15 @@
 .wrapper{
   display: flex;
-  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
   /* Main Axis */
-  justify-content: space-around;
+  justify-content: center;
   /* Cross Axis */
-  align-items: flex-start;
+  align-items: center;
   background-color: burlywood;
   height: 80vh;
+  align-content:stretch;
+
+  flex-wrap: nowrap;
 }
 
 .box {
@@ -14,14 +17,17 @@
   width: 150px;
   height: 150px;
   color: white;
-  font-size: 20px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box:nth-child(2){
   /* order: 상대적 순서. 숫자가 클수록 main Axis 방향으로 뒤로 밀려나서 렌더링됨 */
-  order: 1;
+  /* order: 1; */
 }
 .box:nth-child(3){
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
 
