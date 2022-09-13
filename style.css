@@ -1,32 +1,47 @@
 .grid{
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(4, 100px);
-  gap: 10px;
+  gap: 5px;
+  height: 100vh;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  /* grid 자식크기에 딱맞는 영역만차지하면서, 그리드를 정렬함. 가로축 정렬임 */
+  /* strech 가 기본값. grid 자식의 기본 w,h가 정해지지않앗다면 grid 크기에 꽉채움 */
+
+
+  /* aligin-items 수직 정렬. jkustify-items. 수직정렬. 두개를 합친게 place-items  */
+  /* align-items: center;
+  justify-items: stretch; */
+  /* place-items: stretch center; */
+
 }
 
 .header{
   background-color: aqua;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   /* grid-column-start: 1;
   grid-column-end: 5; */
   /* 1번부터 끝까지. 양수는 왼쪽부터 오른쪽으로 세는 방법. 음수는 오른쪽에서 왼쪽으로 세는 방법 */
-  grid-column: span 4;
+  /* grid-column: span 4; */
 }
 
 .content{
   background-color: antiquewhite;
-  grid-column: 1 / -2;
-  grid-row: span 2;
+  /* grid-column: 1 / -2;
+  grid-row: span 2; */
 }
 
 .nav{
   background-color: blueviolet;
-  grid-column: span 1;
-  grid-row: span 2;
+  /* grid-column: span 1;
+  grid-row: span 2; */
 
 }
 
 .footer{
   background-color: chartreuse;
-  grid-column: span 4;
+  /* grid-column: span 4; */
 }
