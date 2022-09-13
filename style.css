@@ -1,31 +1,32 @@
 .grid{
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  grid-template-rows: 100px 200px 200px 100px;
-  grid-template-areas:
-  "header header header header"
-  "content content content nav"
-  "content content content nav"
-  "footer footer footer footer"
-  ;
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
 }
 
 .header{
   background-color: aqua;
-  grid-area: header;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  /* 1번부터 끝까지. 양수는 왼쪽부터 오른쪽으로 세는 방법. 음수는 오른쪽에서 왼쪽으로 세는 방법 */
+  grid-column: span 4;
 }
 
 .content{
   background-color: antiquewhite;
-  grid-area: content
+  grid-column: 1 / -2;
+  grid-row: span 2;
 }
 
 .nav{
   background-color: blueviolet;
-  grid-area: nav
+  grid-column: span 1;
+  grid-row: span 2;
+
 }
 
 .footer{
   background-color: chartreuse;
-  grid-area: footer
+  grid-column: span 4;
 }
