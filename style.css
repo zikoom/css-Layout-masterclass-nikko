@@ -1,18 +1,27 @@
 .wrapper{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* Main Axis */
   justify-content: space-around;
   /* Cross Axis */
-  align-items: stretch;
+  align-items: flex-start;
   background-color: burlywood;
   height: 80vh;
 }
 
 .box {
   background-color: blue;
-  /* width: 150px; */
+  width: 150px;
   height: 150px;
   color: white;
+  font-size: 20px;
+}
+
+.box:nth-child(2){
+  /* order: 상대적 순서. 숫자가 클수록 main Axis 방향으로 뒤로 밀려나서 렌더링됨 */
+  order: 1;
+}
+.box:nth-child(3){
+  align-self: flex-end;
 }
 
