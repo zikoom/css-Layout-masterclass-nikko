@@ -1,32 +1,16 @@
 .grid{
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  /* minmax. 줄어들거나 늘어들때 limit 크기를 지정 */
+  /* min크기 x column 의 크기가 브라우저를 overflow할수도있음  */
+  grid-template-columns: repeat(10, minmax(100px, 1fr) );
   grid-template-rows: repeat(4, 100px);
   gap: 10px;
 }
 
-.header{
-  background-color: aqua;
-  /* grid-column-start: 1;
-  grid-column-end: 5; */
-  /* 1번부터 끝까지. 양수는 왼쪽부터 오른쪽으로 세는 방법. 음수는 오른쪽에서 왼쪽으로 세는 방법 */
-  grid-column: span 4;
+.item:nth-child(odd){
+  background-color: lightgreen;
 }
 
-.content{
-  background-color: antiquewhite;
-  grid-column: 1 / -2;
-  grid-row: span 2;
-}
-
-.nav{
-  background-color: blueviolet;
-  grid-column: span 1;
-  grid-row: span 2;
-
-}
-
-.footer{
-  background-color: chartreuse;
-  grid-column: span 4;
+.item:nth-child(even){
+  background-color: lightblue;
 }
