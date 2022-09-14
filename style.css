@@ -2,9 +2,24 @@
   display: grid;
   /* minmax. 줄어들거나 늘어들때 limit 크기를 지정 */
   /* min크기 x column 의 크기가 브라우저를 overflow할수도있음  */
-  grid-template-columns: repeat(10, minmax(100px, 1fr) );
-  grid-template-rows: repeat(4, 100px);
-  gap: 10px;
+  /* grid-template-columns: repeat(5, minmax(100px, 1fr) );
+  grid-template-rows: repeat(5, minmax(100px, 1fr)); */
+
+
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) );
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+  gap: 5px;
+  height: 100px;
+}
+
+.grid:first-child{
+  /* auto-fill: 우리가 준 사이즈 안에서 가능한한 많은 column을 만들것. grid div의 가로축을 다채울때까지 */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid:last-child{
+  /* auto-fit: cur element를 쭉 늘려서 개수는 유지하면서 화면은 꽉 채움. but minmax의 max값을 넘어가진 않음 */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .item:nth-child(odd){
