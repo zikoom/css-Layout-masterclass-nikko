@@ -8,18 +8,26 @@
 
   /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr) );
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+
+  /* max-content: 최대한 크게 렌더링. min-content: 최대한 작게렌더링. 크게와 작게의 기준: row 크기를 벗어나지 않는선에서 column의 너비를 조절함 */
+  /* grid-template-columns: max-content min-content; */
+
+  /* repeat, minmax, max-content와 결합한 모습... */
+  grid-template-columns: repeat(6, minmax(max-content, 1fr));
+  grid-auto-rows: 100px;
+
   gap: 5px;
   height: 100px;
 }
 
 .grid:first-child{
   /* auto-fill: 우리가 준 사이즈 안에서 가능한한 많은 column을 만들것. grid div의 가로축을 다채울때까지 */
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
 }
 
 .grid:last-child{
   /* auto-fit: cur element를 쭉 늘려서 개수는 유지하면서 화면은 꽉 채움. but minmax의 max값을 넘어가진 않음 */
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
 }
 
 .item:nth-child(odd){
