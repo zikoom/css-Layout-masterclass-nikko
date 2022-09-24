@@ -6,35 +6,9 @@
   background-color: purple;
 
   display: grid;
-  gap: 5px;
-  height: 50vh;
-
-  grid-template-columns: repeat(4, 50px);
-  grid-template-rows: repeat(4, 50px);
-
-  /* template-rows에서 지정한거보다 더많은 데이터가 있을시 자동으로 row를 생성함 */
-  /* grid-auto-rows: 50px; */
-
-  /* 초기화한 grid 보다 더많은 데이터가 있을시, column 을 늘린다. 동시에 데이터 방향을 바꿈 */
-  /* grid-auto-flow: column; */
-
-  /* flow가 column인상태에서, 데이터가 그리드 보다 많을시 자동으로 컬럼을 추가하는데 이 컬럼의 너비를 지정함 */
-  /* grid-auto-columns: 100px; */
-
-  /* moving 전체 그리드 */
-  /* justify-content: center; */
-
-
-  /* grid 자식크기에 딱맞는 영역만차지하면서, 그리드를 정렬함. 가로축 정렬임 */
-  /* strech 가 기본값. grid 자식의 기본 w,h가 정해지지않앗다면 grid 크기에 꽉채움 */
-
-  /* items: one cell. contest: 전체 grid */
-
-  /* aligin-items 수직 정렬. jkustify-items. 수직정렬. 두개를 합친게 place-items  */
-  /* align-items: center;
-  justify-items: stretch; */
-  /* place-items: stretch center; */
-
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
 }
 
 .header{
@@ -62,23 +36,12 @@
 
 .nav{
   background-color: blueviolet;
-  /* grid-column: span 1;
-  grid-row: span 2; */
+  grid-column: span 1;
+  grid-row: span 2;
 
 }
 
 .footer{
   background-color: chartreuse;
-  /* grid-column: span 4; */
-}
-
-.item{
-  color: white;
-}
-
-.item:nth-child(odd){
-  background-color: aqua;
-}
-.item:nth-child(even){
-  background-color:blue;
+  grid-column: span 4;
 }
